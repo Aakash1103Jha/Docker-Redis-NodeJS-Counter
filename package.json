@@ -1,0 +1,22 @@
+{
+  "name": "docker-visits-counter-nodejs",
+  "version": "1.0.0",
+  "description": "This project will be hosted in a docker container and the number of visits will be stored in a redis instance running on a separate container",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "redis",
+    "nodejs",
+    "docker"
+  ],
+  "author": "Aakash Jha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "redis": "3.1.2"
+  }
+}

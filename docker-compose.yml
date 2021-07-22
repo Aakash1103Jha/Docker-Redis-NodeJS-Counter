@@ -1,0 +1,18 @@
+# specifies the version of docker compose that has to be used
+version: "3"
+
+# tell everything docker has to do
+# devine services that will be used -> that will take form of containers
+services:
+    #
+    # creates a container with redis server, using the redis image
+    redis-server:
+        image: "redis"
+    # creates a container with the latest build in the build directory as image
+    node-app:
+        # specifying a restart policy for this container -> no, always, on-failure, unless-stopped
+        restart: on-failure
+        build: .
+        # port mapping for node app
+        ports:
+            - "4500:4000"
